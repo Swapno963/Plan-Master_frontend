@@ -31,12 +31,13 @@
                         <a href="index.html" class="logo">
                             <img src="assets/images/logo_EffortlessPlan .png" alt="" style="max-width: 112px;">
                         </a>
-                        <ul class="nav">
+                        <ul class="nav" id="nav_ul">
                           <li class="scroll-to-section"><a href="index.html" class="active">Home</a></li>
                           <li class="scroll-to-section"><a href="add_task.html">Make To-do</a></li>
                           <li class="scroll-to-section"><a href="show_task.html">Show Task</a></li>                      
-                          <li class="scroll-to-section"><a href="login.html">Login</a></li>
-                          <li class="scroll-to-section"><a href="register.html">Register</a></li>
+                          <!-- <li class="scroll-to-section"><a href="login.html">Login</a></li> -->
+                          <!-- <li class="scroll-to-section"></li> -->
+                          <!-- <li  class="scroll-to-section"></li> -->
                       </ul>   
                     </nav>
                 </div>
@@ -92,7 +93,7 @@
                     <option value="7">Sevel</option>
                     <option value="8">Eight</option>
                   </select>
-                  <label for="floatingSelect">Works with selects</label>
+                  <label for="floatingSelect">Hear you can selece you task priority level</label>
                 </div>
               </div>
               <div class="col-lg-6">
@@ -104,9 +105,22 @@
                     <option value="completed">Completed</option>
                   
                   </select>
-                  <label for="floatingSelect">Works with selects</label>
+                  <label for="floatingSelect">Define you work current status</label>
                 </div>
               </div>
+              <!-- to do -->
+              <!-- <div class="col-lg-6 py-3">
+                <div class="form-floating">
+                  <select class="form-select" id="StatusSelect" aria-label="Floating label select example">
+                    <option selected>select Project</option>
+                    <option value="to-do(incomplete)">To Do</option>
+                    <option value="on-going">Processing</option>
+                    <option value="completed">Completed</option>
+                  
+                  </select>
+                  <label for="floatingSelect">Define you work current Project</label>
+                </div>
+              </div> -->
               <div class="col-lg-4 mx-auto mt-5">
                   <fieldset>
                       <button type="button" id="form-submit" class="btn btn-success" onclick="handleTaskSubmission(event)">Set Task</button>
@@ -125,18 +139,48 @@
 
 
       <!-- footer -->
-      <footer>
-        <div class="container">
-          <div class="col-lg-12">
-            <p>Copyright © 2024 <a href="#">Swapno Mondol</a>. All rights reserved. 
-            
-            <br>Backend: <a href="https://templatemo.com" target="_blank">Django</a></p>
-          </div>
+     
+  <footer class="p-5 text-white fw-bold " style="background-color: rgb(46, 41, 97);">
+    <div class="container w-75 m-auto row p-5">
+      <div class="col-md-4 ">
+        <h4 class="pb-4">Thank You For choosing Us</h4>
+        <h5 class="pb-3">Follow US</h5>
+        <div class="icons">
+          <img class="icon " src="./assets/images/LinkedIn.png" alt="" />
+          <img class="icon " src="./assets/images/YouTube.png" alt="" />
+          <img class="icon" src="./assets/images/LinkedIn.png" alt="" />
         </div>
-      </footer>
+      </div>
+      <div class="col-md-3">
+        <h5 class="py-1">Feature</h5>
+        <li class="py-1">Add Task</li>
+        <li class="py-1">Delete Task us</li>
+        <li class="py-1">Filter task</li>
+        <li class="py-1">Authientication</li>
+      </div>
+      <div class="col-md-2">
+        <h5 class="py-1">Company</h5>
+        <li class="py-1">About</li>
+        <li class="py-1">Contact us</li>
+        <li class="py-1">Culture</li>
+        <li class="py-1">Blog</li>
+      </div>
+      <div class="col-md-3">
+        <h5 class="py-1">Contact Us</h5>
+        <li class="py-1">Email : swapno963@gmail.com</li>
+        <li class="py-1">What's up : 01709112230</li>
+        <li class="py-1">Blog : Will be available soom</li>
+      </div>
+    </div>
+    <hr />
+    <p class="text-center mt-3 text-white">
+      <small>Copyright © Smartcare. All Rights Reserved</small>
+    </p>
+</footer>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     </body>
      
     <script src="./js/add_task.js"></script>
+    <script src="./js/authientication.js"></script>
 </body>
 </html>

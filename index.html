@@ -8,6 +8,9 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
+    <!-- slider -->
+    <link href="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/css/swiffy-slider.min.css" rel="stylesheet" crossorigin="anonymous">
+
     <title>Tale SEO Agency CSS Template by TemplateMo website</title>
 
     <!-- Bootstrap core CSS -->
@@ -37,12 +40,14 @@
                     <a href="index.html" class="logo">
                         <img src="assets/images/logo_EffortlessPlan .png" alt="" style="max-width: 112px;">
                     </a>
-                    <ul class="nav">
+                        <ul class="nav" id="nav_ul">
+                         
                       <li class="scroll-to-section"><a href="index.html" class="active">Home</a></li>
                       <li class="scroll-to-section"><a href="add_task.html">Make To-do</a></li>
                       <li class="scroll-to-section"><a href="show_task.html">Show Task</a></li>                      
-                      <li class="scroll-to-section"><a href="login.html">Login</a></li>
+                      <!-- <li class="scroll-to-section"><a href="login.html">Login</a></li>
                       <li class="scroll-to-section"><a href="register.html">Register</a></li>
+                      <li onclick="logout()" class="scroll-to-section"><a href="#">Logout</a></li> -->
                   </ul>   
                 </nav>
             </div>
@@ -185,6 +190,44 @@
     </div>
   </div> -->
 
+<!-- -- Reviews -->
+
+<!-- Reviews -->
+<div class="review-container p-5 mt-5 w-75 m-auto">
+  <h1 class="title">Clients Review about us</h1>
+  <p class="description text-center w-50 m-auto">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci
+    <br />
+    quis sit, aperiam deserunt at accusamus!
+  </p>
+  <div class="reviews">
+    <div
+      class="swiffy-slider slider-item-show2 slider-item-reveal slider-nav-outside slider-nav-round slider-nav-visible slider-indicators-outside slider-indicators-round slider-indicators-dark slider-nav-animation slider-nav-animation-fadein slider-item-first-visible"
+    >
+      <ul id="review-container" class="slider-container py-4"></ul>
+
+      <button
+        type="button"
+        class="slider-nav"
+        aria-label="Go left"
+      ></button>
+      <button
+        type="button"
+        class="slider-nav slider-nav-next"
+        aria-label="Go left"
+      ></button>
+
+      <div class="slider-indicators">
+        <button class="active" aria-label="Go to slide"></button>
+        <button aria-label="Go to slide"></button>
+        <button aria-label="Go to slide"></button>
+        <button aria-label="Go to slide"></button>
+        <button aria-label="Go to slide" class=""></button>
+      </div>
+    </div>
+  </div>
+</div>
+
   <div class="infos section" id="infos">
     <div class="container">
       <div class="row">
@@ -310,15 +353,43 @@
     </div>
   </div> -->
 
-  <footer>
-    <div class="container">
-      <div class="col-lg-12">
-        <p>Copyright © 2024 <a href="#">Swapno Mondol</a>. All rights reserved. 
-        
-        <br>Backend: <a href="https://templatemo.com" target="_blank">Django</a></p>
+  <footer class="p-5 text-white fw-bold " style="background-color: rgb(46, 41, 97);">
+    <div class="container w-75 m-auto row p-5">
+      <div class="col-md-4 ">
+        <h4 class="pb-4">Thank You For choosing Us</h4>
+        <h5 class="pb-3">Follow US</h5>
+        <div class="icons">
+          <img class="icon " src="./assets/images/LinkedIn.png" alt="" />
+          <img class="icon " src="./assets/images/YouTube.png" alt="" />
+          <img class="icon" src="./assets/images/LinkedIn.png" alt="" />
+        </div>
+      </div>
+      <div class="col-md-3">
+        <h5 class="py-1">Feature</h5>
+        <li class="py-1">Add Task</li>
+        <li class="py-1">Delete Task us</li>
+        <li class="py-1">Filter task</li>
+        <li class="py-1">Authientication</li>
+      </div>
+      <div class="col-md-2">
+        <h5 class="py-1">Company</h5>
+        <li class="py-1">About</li>
+        <li class="py-1">Contact us</li>
+        <li class="py-1">Culture</li>
+        <li class="py-1">Blog</li>
+      </div>
+      <div class="col-md-3">
+        <h5 class="py-1">Contact Us</h5>
+        <li class="py-1">Email : swapno963@gmail.com</li>
+        <li class="py-1">What's up : 01709112230</li>
+        <li class="py-1">Blog : Will be available soom</li>
       </div>
     </div>
-  </footer>
+    <hr />
+    <p class="text-center mt-3 text-white">
+      <small>Copyright © Smartcare. All Rights Reserved</small>
+    </p>
+</footer>
 
 
   <!-- Scripts -->
@@ -332,7 +403,11 @@
   <script src="assets/js/popup.js"></script>
   <script src="assets/js/custom.js"></script>
 
-
+<!-- for review -->
+  <script src="./js/index_review.js"></script>
+  <!-- slider -->
+  <script src="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/js/swiffy-slider.min.js" crossorigin="anonymous" defer></script>
+  <script src="./js/authientication.js"></script>
   </body>
 
 </html>

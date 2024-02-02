@@ -31,12 +31,13 @@
                         <a href="index.html" class="logo">
                             <img src="assets/images/logo_EffortlessPlan .png" alt="" style="max-width: 112px;">
                         </a>
-                        <ul class="nav">
+                        <ul class="nav" id="nav_ul">
                           <li class="scroll-to-section"><a href="index.html" class="active">Home</a></li>
                           <li class="scroll-to-section"><a href="add_task.html">Make To-do</a></li>
                           <li class="scroll-to-section"><a href="show_task.html">Show Task</a></li>                      
-                          <li class="scroll-to-section"><a href="login.html">Login</a></li>
+                          <!-- <li class="scroll-to-section"><a href="login.html">Login</a></li>
                           <li class="scroll-to-section"><a href="register.html">Register</a></li>
+                          <li onclick="logout()" class="scroll-to-section"><a href="#">Logout</a></li> -->
                       </ul>   
                     </nav>
                 </div>
@@ -45,7 +46,7 @@
       </header>
     
 
-    <!-- add to do -->
+    <!-- user login -->
       <div class="infos section" id="infos">
         <div class="container">
           <div class="row">
@@ -68,14 +69,14 @@
                           <form>
                             <!-- Email input -->
                             <div class="form-outline mb-4">
-                              <input type="email" id="form1Example13" class="form-control form-control-lg" />
-                              <label class="form-label" for="form1Example13">Email address</label>
+                              <input type="email" id="username" class="form-control form-control-lg" />
+                              <label class="form-label" for="username">User Name</label>
                             </div>
                   
                             <!-- Password input -->
                             <div class="form-outline mb-4">
-                              <input type="password" id="form1Example23" class="form-control form-control-lg" />
-                              <label class="form-label" for="form1Example23">Password</label>
+                              <input type="password" id="password" class="form-control form-control-lg" />
+                              <label class="form-label" for="password">Password</label>
                             </div>
                   
                             <div class="d-flex justify-content-around align-items-center mb-4">
@@ -88,7 +89,7 @@
                             </div>
                   
                             <!-- Submit button -->
-                            <button type="submit" class="btn btn-primary btn-lg btn-block">Sign in</button>
+                            <button type="submit" class="btn btn-primary btn-lg btn-block" onclick="handleLogin(event)">Log In</button>
                   
                         
                   
@@ -105,6 +106,44 @@
         </div>
       </div>
 
-     
+      <footer class="p-5 text-white fw-bold " style="background-color: rgb(46, 41, 97);">
+        <div class="container w-75 m-auto row p-5">
+          <div class="col-md-4 ">
+            <h4 class="pb-4">Thank You For choosing Us</h4>
+            <h5 class="pb-3">Follow US</h5>
+            <div class="icons">
+              <img class="icon " src="./assets/images/LinkedIn.png" alt="" />
+              <img class="icon " src="./assets/images/YouTube.png" alt="" />
+              <img class="icon" src="./assets/images/LinkedIn.png" alt="" />
+            </div>
+          </div>
+          <div class="col-md-3">
+            <h5 class="py-1">Feature</h5>
+            <li class="py-1">Add Task</li>
+            <li class="py-1">Delete Task us</li>
+            <li class="py-1">Filter task</li>
+            <li class="py-1">Authientication</li>
+          </div>
+          <div class="col-md-2">
+            <h5 class="py-1">Company</h5>
+            <li class="py-1">About</li>
+            <li class="py-1">Contact us</li>
+            <li class="py-1">Culture</li>
+            <li class="py-1">Blog</li>
+          </div>
+          <div class="col-md-3">
+            <h5 class="py-1">Contact Us</h5>
+            <li class="py-1">Email : swapno963@gmail.com</li>
+            <li class="py-1">What's up : 01709112230</li>
+            <li class="py-1">Blog : Will be available soom</li>
+          </div>
+        </div>
+        <hr />
+        <p class="text-center mt-3 text-white">
+          <small>Copyright © Smartcare. All Rights Reserved</small>
+        </p>
+    </footer>
+    <script src="./js/authientication.js"></script>
+
 </body>
 </html>
