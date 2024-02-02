@@ -79,6 +79,7 @@ const logout = () => {
     .then((data) => {
       alert("Logout successfully!");
       location.reload();
+      console.log(data);
     });
 };
 // done
