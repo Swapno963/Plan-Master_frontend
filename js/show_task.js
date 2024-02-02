@@ -1,4 +1,3 @@
-
 function show_task(tasks) {
   const parent = document.getElementById("table-row");
   parent.innerHTML = null;
@@ -21,66 +20,65 @@ function show_task(tasks) {
           `;
     parent.appendChild(div);
   });
-};
-function  load_task_data() {
-   fetch("https://effortless-plan.onrender.com/api/")
-   .then(res =>res.json())
-   .then(data=>show_task(data))
-  }
+}
+function load_task_data() {
+  fetch("https://effortless-plan.onrender.com/api/")
+    .then((res) => res.json())
+    .then((data) => show_task(data));
+}
 
-load_task_data()
+load_task_data();
 
 function delete_task(taskId) {
-  console.log('delete cicked');
-  // http://127.0.0.1:8000/delete/5
-  fetch(`http://127.0.0.1:8000/api/${taskId}/`, {
-    method: 'DELETE',
+  console.log("delete cicked");
+  // https://effortless-plan.onrender.com/delete/5
+  fetch(`https://effortless-plan.onrender.com/api/${taskId}/`, {
+    method: "DELETE",
     headers: {
-      'Content-Type': 'application/json',
+      "Content-Type": "application/json",
       // You may include additional headers if required (e.g., authentication headers)
     },
   })
-
-    .then(data => {
-      alert('Task deleted successfully:', data);
-      location.reload()
+    .then((data) => {
+      alert("Task deleted successfully:", data);
+      location.reload();
     })
-    .catch(error => {
-      console.log( error);
+    .catch((error) => {
+      console.log(error);
     });
 }
 
 // edit
 function show_single_task(id) {
-  fetch(`http://127.0.0.1:8000/api/${id}`)
-  .then(res=>res.json())
-  .then(data =>{
-    // window.location.href ="http://127.0.0.1:5500/add_task.html"
+  fetch(`https://effortless-plan.onrender.com/api/${id}`)
+    .then((res) => res.json())
+    .then((data) => {
+      // window.location.href ="http://127.0.0.1:5500/add_task.html"
 
-    // document.getElementById("title").value = data.title;
-    // document.getElementById("due_date").value = "";
-    // document.getElementById("priority").value = "";;
-    // document.getElementById("current_status").value = "";
-    console.log(data);
-  })
+      // document.getElementById("title").value = data.title;
+      // document.getElementById("due_date").value = "";
+      // document.getElementById("priority").value = "";;
+      // document.getElementById("current_status").value = "";
+      console.log(data);
+    });
 }
 
 function edit_element(id) {
-
   show_single_task(id);
 }
 
-
 // all filter
-const status_filter=() =>{
-  const status = document.getElementById("StatusSelect").value
-  const priority = document.getElementById("PrioritySelect").value
-  const due_date = document.getElementById("due_date").value
+const status_filter = () => {
+  const status = document.getElementById("StatusSelect").value;
+  const priority = document.getElementById("PrioritySelect").value;
+  const due_date = document.getElementById("due_date").value;
   console.log(status);
-  fetch(`http://127.0.0.1:8000/api/?priority=${priority}&due_date=${due_date}&current_status=${status}`)
-  .then(res=>res.json())
-  .then(data=>{
-    show_task(data);
-    console.log(data);
-  })
-}
+  fetch(
+    `https://effortless-plan.onrender.com/api/?priority=${priority}&due_date=${due_date}&current_status=${status}`
+  )
+    .then((res) => res.json())
+    .then((data) => {
+      show_task(data);
+      console.log(data);
+    });
+};
